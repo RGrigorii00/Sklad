@@ -17,3 +17,4 @@ node app.js
 * Bootstrap 5.X
 * NodeJs 18
 * Js
+* SQLite
