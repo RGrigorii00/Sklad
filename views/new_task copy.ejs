@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <title>engine HBS</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <link rel="shortcut icon" href="/images/favicon.ico" />
+</head>
+
+<body>
+    <center>
+    <form>
+        <%- include('./partials/new_select.ejs') %>
+        <input 
+            type="text" 
+            name="id" 
+            value="" 
+            placeholder="Номер"  required /> <br>
+
+        <input 
+            type="text" 
+            name="tovar" 
+            value="" 
+            placeholder="Название товара"  required /> <br>
+
+        <input 
+            type="number" 
+            name="kolichestvo" 
+            value="" 
+            placeholder="Количество товара" /> <br>
+
+        <input 
+            type="date" 
+            id="start" 
+            name="date" 
+            value=""  
+                /> <br> 
+
+        <input 
+            type="text" 
+            name="kladovshik" 
+            value="" 
+            placeholder="Кладовщик" /> <br>
+        
+        <input 
+            type="text" 
+            name="sklad" 
+            value="" 
+            placeholder="Номер склада"  /> <br>
+        
+        <button 
+            type="submit" 
+            class="del"
+            formaction="/add_task" 
+            formmethod="post">
+            Добавить задачу
+        </button>
+    </form>
+
+    </center>
+</body>
+</html>

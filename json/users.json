@@ -1,0 +1,47 @@
+[
+    {
+    "id": "0",
+    "name": "admin",
+    "password": "0000"
+    },
+    {
+    "id": "0",
+    "name": "user",
+    "password": "1111"
+    },
+    {
+    "id": "0",
+    "name": "Vlad",
+    "password": "3456"
+    },
+    {
+    "id": "0",
+    "name": "Ivan",
+    "password": "6543"
+    },
+    {
+    "id": "0",
+    "name": "Sasha",
+    "password": "5577"
+    },
+    {
+    "id": "0",
+    "name": "Egor",
+    "password": "5577"
+    },
+    {
+    "id": "0",
+    "name": "Dima",
+    "password": "АААА"
+    },
+    {
+    "id": "0",
+    "name": "Sergei",
+    "password": "SeroslavlV"
+    },
+    {
+    "id": "0",
+    "name": "Миньен",
+    "password": "12345жопавзорвалась"
+    }
+]

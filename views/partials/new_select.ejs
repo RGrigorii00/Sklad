@@ -1,0 +1,19 @@
+<center>
+<select name="tovar">
+    <% for (let item of tovar) { %>
+        <option name="<%=item.id%>"><%=item.name%></option>
+    <% } %>
+</select>
+
+<select name="sklad">
+    <% for (let item of sklad) { %>
+        <option name="<%=item.id%>"><%=item.name%></option>
+    <% } %>
+</select>
+
+<select name="kladovshik">
+    <% for (let item of kladovshik) { %>
+        <option name="<%=item.id%>"><%=item.name%></option>
+    <% } %>
+</select>
+</center>

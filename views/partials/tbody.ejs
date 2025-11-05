@@ -1,0 +1,37 @@
+<tbody>
+    <% for (let item of json) { %>
+            <%trClass = ('new' in item)&&(parseInt(item.new) == 2)? 'table-warning': trClass = ('new' in item)&&(parseInt(item.new) == 1)? 'table-danger': '' %>
+        <tr class="<%=trClass%> border-dark">
+            <% for (let key of keys) { %>
+                <% tdClass = (key === 'id')? 'id': 'item' %>
+                <td class="<%= tdClass%> border-dark">
+                    <%= item[key] %>
+                </td>
+            <% } %>
+            <% if (sess.username != undefined) { %>
+                <td class="border-dark">
+                    <form>
+                        <button type="submit" class="del btn btn-light" formaction="/update_task/<%=item.id%>" formmethod="get" value="<%-item.id%>" style="border-color: black;">Изменить</button>
+                    </form>
+                </td>
+            <% } %>
+            <% if (sess.username == 'admin') { %>
+                <td class="border-dark">
+                    <form>
+                        <button type="submit" class="del btn btn-light" formaction="/delete/<%=item.id%>" formmethod="post" value="<%=item.id%>" style="border-color: black;">Удалить</button>
+                    </form>
+                </td>
+            <% } %>
+            <% if (sess.username == 'admin') { %>
+            <% } else if ((sess.username != undefined)&&(sess.username == 'admin')) { %>
+            <td scope="row">
+                <!-- Кнопки -->
+            </td>
+            <td scope="row">
+                <!-- Кнопки -->
+            </td>
+            <% } else if ((sess.username == 'admin')) { %>
+            <% } %>
+        </tr>
+    <% } %>
+</tbody>

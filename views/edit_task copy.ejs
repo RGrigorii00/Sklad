@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <title>engine HBS</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <link rel="shortcut icon" href="/images/favicon.ico" />
+</head>
+
+<body>
+    <center>
+    <form>
+        <input 
+            type="text" 
+            name="id" 
+            value="<%=json.id%>"
+            placeholder="Номер"  required /> <br>
+
+        <input 
+            type="text" 
+            name="name" 
+            value="<%=json.name%>" 
+            placeholder="Название"  required /> <br>
+
+        <input 
+            type="text" 
+            name="description" 
+            value="<%=json.description%>" 
+            placeholder="Описание" /> <br>
+
+        <input 
+            type="date" 
+            id="start" 
+            name="date" 
+            value="<%=json.date%>"  
+             /> <br> 
+
+        <input 
+            type="text" 
+            name="start_time" 
+            value="<%=json.start_time%>" 
+            placeholder="Время начала" /> <br>
+        
+        <input 
+            type="text" 
+            name="status" 
+            value="<%=json.status%>" 
+            placeholder="Статус"  /> <br>
+
+        <input 
+            type="text" 
+            name="priority" 
+            value="<%=json.priority%>" 
+            placeholder="Приоритет" /> <br>
+        
+        <button 
+            type="submit" 
+            class="del"
+            formaction="/update_task/<%=json.id%>" 
+            formmethod="post">
+            Изменить задачу
+        </button>
+    </form>
+
+    </center>
+        <script> 
+            const inputDate = document.querySelector('input[name="input-date"]');
+
+            inputDate.addEventListener("change", (e) => {
+                console.log(inputDate["value"])
+            });
+        </script>
+</body>
+</html>

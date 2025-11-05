@@ -1,0 +1,25 @@
+<thead>
+    <tr class="table-success table-border border-dark"> <!-- формируем заголовки -->
+        <% for (let key of keys) { %>
+            <th scope="row">
+                <%= titles[key] %>
+            </th>
+        <% } %>
+        <% if ((sess.username != undefined)&&(sess.username == 'admin')) { %>
+        <th scope="row">
+            <!-- Кнопки -->
+        </th>
+        <th scope="row">
+            <!-- Кнопки -->
+        </th>
+        <% } else if (sess.username == undefined) { %>
+            <!-- <th scope="row">
+                Кнопки
+            </th> -->
+        <% } else if ((sess.username != undefined)&&(sess.username != 'admin')) { %>
+            <th scope="row">
+                <!-- Кнопки -->
+            </th>
+        <% } %>
+    </tr>
+</thead>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <%- include('./partials/head.ejs') %>
+</head>
+
+<body>
+    <%- include('./partials/header.ejs') %>
+    <center>
+    <form>
+    <div>
+        <div style="display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+        margin: 13px;">
+            <p style="margin-bottom: 0px; margin-right: 3px;">Название товара: </p>
+            <select name="tovar">
+                <h1>Название товара: </h1>
+                <% for (let item of tovar) { %>
+                    <option value="<%=item.id%>"><%=item.name%></option>
+                <% } %>
+            </select>
+        </div>
+
+        <div style="display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+        margin: 13px;">
+            <p style="margin-bottom: 0px; margin-right: 3px;">Количество товара: </p>
+            <input 
+                type="number" 
+                name="kolichestvo" 
+                value="" 
+                placeholder="Количество товара" required/> <br>
+        </div>
+
+        <div style="display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+        margin: 13px;">
+            <p style="margin-bottom: 0px; margin-right: 3px;">Кладовщик: </p>
+            <select name="kladovshik">
+                <% for (let item of kladovshik) { %>
+                    <option value="<%=item.id%>"><%=item.name%></option>
+                <% } %>
+            </select>
+        </div>
+
+        <div style="display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+        margin: 13px;">
+            <p style="margin-bottom: 0px; margin-right: 3px;">Склад: </p>
+            <select name="sklad">
+                <% for (let item of sklad) { %>
+                    <option value="<%=item.id%>"><%=item.name%></option>
+                <% } %>
+            </select>
+        </div>
+
+        <div style="display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+        margin: 13px;">
+            <p style="margin-bottom: 0px; margin-right: 3px;">Дата поступления: </p>
+            <input 
+                type="date" 
+                id="start" 
+                name="date" 
+                min="1000-07-07" 
+                max="7777-07-07"
+                value=""  
+                    required/> <br> 
+
+        
+        </div>
+        <div>
+            <button 
+                type="submit" 
+                class="del btn btn-light"
+                formaction="/add_task" 
+                formmethod="post" style="border-color: black;">
+                Добавить задачу
+            </button>
+        </div>
+    </div>
+    </form>
+
+    </center>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
